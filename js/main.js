@@ -36,6 +36,7 @@ function validarDescripcionRegalo(descripcionRegalo) {
 
 function validarFormulario(event) {
     event.preventDefault();
+    borrarErroresLi();
     const $form = document.querySelector('#carta-a-santa');
 
     const nombre = $form.nombre.value;
@@ -56,6 +57,13 @@ function validarFormulario(event) {
     if (esExito) {
         $form.className = 'oculto';
         document.querySelector('#exito').className = '';
+    }
+}
+
+function borrarErroresLi() {
+    const $erroresLi = document.querySelectorAll('li');
+    for (let i = 0; i < $erroresLi.length; i++) {
+        $erroresLi[i].remove();
     }
 }
 
