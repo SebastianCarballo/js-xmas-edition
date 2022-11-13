@@ -57,6 +57,9 @@ function validarFormulario(event) {
     if (esExito) {
         $form.className = 'oculto';
         document.querySelector('#exito').className = '';
+        setTimeout(() => {
+            window.location.href = `wishlist.html`;
+        }, 5000);
     }
 }
 
@@ -89,3 +92,4 @@ function manejarErrores(errores) {
 }
 const $form = document.querySelector('#carta-a-santa');
 $form.onsubmit = validarFormulario;
+setTimeout;
